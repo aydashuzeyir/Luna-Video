@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "Luna Video Vault",
+    "slug": "luna-video-vault",
+    "version": "1.0.0",
+    "orientation": "default",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#0B1033",
+    "android": {
+      "package": "com.luna.videovault",
+      "blockedPermissions": [
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Luna Video yalnız seçdiyin videolara baxır.",
+          "cameraPermission": false,
+          "microphonePermission": false
+        }
+      ],
+      [
+        "expo-video",
+        {
+          "supportsBackgroundPlayback": true,
+          "supportsPictureInPicture": true
+        }
+      ],
+      [
+        "expo-share-intent",
+        {
+          "androidIntentFilters": [
+            "video/*"
+          ],
+          "androidMultiIntentFilters": [
+            "video/*"
+          ]
+        }
+      ]
+    ],
+    "scheme": "lunavideo"
+  }
+}
